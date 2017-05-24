@@ -1,0 +1,22 @@
+serving resources from: jar:file:/home/idriver/Downloads/kafka-offset-console/KafkaOffsetMonitor-assembly-0.2.0.jar!/offsetapp
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2017-05-24 09:14:47.928:INFO:oejs.Server:jetty-7.x.y-SNAPSHOT
+2017-05-24 09:14:49.122:INFO:oejsh.ContextHandler:started o.e.j.s.ServletContextHandler{/,jar:file:/home/idriver/Downloads/kafka-offset-console/KafkaOffsetMonitor-assembly-0.2.0.jar!/offsetapp}
+2017-05-24 09:14:49.814:INFO:oejs.AbstractConnector:Started SocketConnector@0.0.0.0:8089
+log4j:WARN No appenders could be found for logger (org.I0Itec.zkclient.ZkConnection).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+log4j:WARN No appenders could be found for logger (org.I0Itec.zkclient.ZkEventThread).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Exception in thread "Timer-0" org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 30000
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:880)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:98)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:84)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$.getGroups(OffsetGetterWeb.scala:98)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$.writeToDb(OffsetGetterWeb.scala:44)
+	at com.quantifind.kafka.offsetapp.OffsetGetterWeb$$anon$2.run(OffsetGetterWeb.scala:56)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
